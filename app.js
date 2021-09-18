@@ -4,8 +4,16 @@ var currentPrice = document.querySelector('#current-price')
 var submitBtm = document.querySelector('#output-btn')
 var OutputEl = document.querySelector('#output')
 
+function submitHandle(){
+    var ip = intialPrice.value
+    var nos= noOfStocks.value
+    var cp = currentPrice.value
+    calculateProfitLoss(ip,nos,cp)
+}
+
 
 function calculateProfitLoss(initial,quantity,current){
+     
     if(initial> current){
         var loss = (initial-current)*quantity
         var lossPercent = (loss/initial)*100
@@ -23,4 +31,4 @@ function calculateProfitLoss(initial,quantity,current){
 
 }
 
-submitBtm.addEventListener('click',calculateProfitLoss)
+submitBtm.addEventListener('click',submitHandle)
