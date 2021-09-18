@@ -17,6 +17,8 @@ function financial(x){
 
 
 function calculateProfitLoss(initial,quantity,current){
+    
+    if(intialPrice.value!=""&& noOfStocks.value!=""&&currentPrice!=""){
      
     if(initial> current){
         var loss =financial((initial-current)*quantity)
@@ -32,6 +34,11 @@ function calculateProfitLoss(initial,quantity,current){
         OutputEl.textContent= `You are still there !!`
 
     }
+}
+
+else{
+    OutputEl.textContent =`ENTER ALL VALAUES!! `
+}
 
 }
 
