@@ -11,16 +11,20 @@ function submitHandle(){
     calculateProfitLoss(ip,nos,cp)
 }
 
+function financial(x){
+    return Number.parseFloat(x).toFixed(2)
+}
+
 
 function calculateProfitLoss(initial,quantity,current){
      
     if(initial> current){
-        var loss = (initial-current)*quantity
-        var lossPercent = (loss/initial)*100
+        var loss =financial((initial-current)*quantity)
+        var lossPercent =financial((loss/initial)*100)
         OutputEl.textContent=`Your loss is Rs.${loss} and ${lossPercent}%`
     }else if (current > initial){
-        var profit = (current-initial)*quantity
-        var profitPercentage = (profit/initial)*100
+        var profit = financial((current-initial)*quantity)
+        var profitPercentage = financial((profit/initial)*100)
         OutputEl.textContent=(`profit is Rs.${profit} and ${profitPercentage}%`)
 
     }
