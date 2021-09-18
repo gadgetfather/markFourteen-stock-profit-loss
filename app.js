@@ -9,15 +9,18 @@ function calculateProfitLoss(initial,quantity,current){
     if(initial> current){
         var loss = (initial-current)*quantity
         var lossPercent = (loss/initial)*100
+        OutputEl.textContent=`Your loss is Rs.${loss} and ${lossPercent}%`
     }else if (current > initial){
         var profit = (current-initial)*quantity
         var profitPercentage = (profit/initial)*100
-        console.log(`profit is ${profit} and ${profitPercentage}`)
+        OutputEl.textContent=(`profit is Rs.${profit} and ${profitPercentage}%`)
 
     }
     else{
+        OutputEl.textContent= `You are still there !!`
 
     }
 
 }
-calculateProfitLoss(10,10,12)
+
+submitBtm.addEventListener('click',calculateProfitLoss)
