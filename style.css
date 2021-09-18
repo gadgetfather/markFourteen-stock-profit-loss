@@ -1,14 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
 body{
+    background-image: linear-gradient(to right top, #7e92b0, #6f85ae, #6278ab, #586aa8, #515ca3);
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
     text-align: center;
-   
+    padding-top: 100px;
+    font-size: 400%;
+    color: aliceblue;
+}
+main{
+    text-align: center;
 }
 
 label{
+    display: block;
+    padding-bottom: 20px;
+    padding: 20px 0;
+    font-size: 150%;
     
-    padding-bottom: 1rem;
 }
 
 input{
+    padding:1rem;
+    width: 200px;
+    border-radius: 0.2rem;
     
 }
 input[type=number]::-webkit-inner-spin-button, 
@@ -17,4 +40,22 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-appearance: none;
     appearance: none;
     margin: 0; 
+}
+
+button{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding: 1rem;
+    margin-bottom: 60px;
+    
+}
+#output{
+    
+    padding-top: 2rem;
+    font-size: 150%;
+  
+    display: inline;
+    border-radius: 1rem;
+    
 }
