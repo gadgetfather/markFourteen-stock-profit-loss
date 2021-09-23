@@ -54,8 +54,8 @@ button{
     
     padding-top: 2rem;
     font-size: 160%;
-  margin: auto;
-    
+    margin: auto;
+    max-width: 800px;
     border-radius: 1rem;
     
 }
