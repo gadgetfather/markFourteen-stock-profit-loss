@@ -5,9 +5,9 @@ var submitBtm = document.querySelector('#output-btn')
 var OutputEl = document.querySelector('#output')
 
 function submitHandle(){
-    var ip = intialPrice.value
-    var nos= noOfStocks.value
-    var cp = currentPrice.value
+    var ip =number( intialPrice.value)
+    var nos=number( noOfStocks.value)
+    var cp = number(currentPrice.value)
     calculateProfitLoss(ip,nos,cp)
 }
 
