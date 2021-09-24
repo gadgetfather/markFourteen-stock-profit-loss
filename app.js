@@ -8,7 +8,7 @@ function submitHandle(){
     var ip =Number( intialPrice.value)
     var nos=Number( noOfStocks.value)
     var cp = Number(currentPrice.value)
-    calculateProfitLoss(ip,nos,cp)
+    calculateProfitLoss(ip,cp)
 }
 
 function financial(x){
@@ -16,18 +16,18 @@ function financial(x){
 }
 
 
-function calculateProfitLoss(initial,quantity,current){
+function calculateProfitLoss(initial,current){
     
     if(intialPrice.value!=""&& noOfStocks.value!=""&&currentPrice!=""){
      
     if(initial> current){
-        var loss =financial((initial-current)*quantity)
+        var loss =financial((initial-current))
         var lossPercent =financial((loss/initial)*100)
         OutputEl.style.color="Red"
         OutputEl.style.backgroundColor = "white"
         OutputEl.textContent=`Your loss is Rs.${loss} and ${lossPercent}%`
     }else if (current > initial){
-        var profit = financial((current-initial)*quantity)
+        var profit = financial((current-initial))
         var profitPercentage = financial((profit/initial)*100)
         OutputEl.style.color="green"
         OutputEl.style.backgroundColor = "white"
